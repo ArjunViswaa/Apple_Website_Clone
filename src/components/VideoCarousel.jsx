@@ -98,10 +98,7 @@ const VideoCarousel = () => {
 
             // update the progress bar
             const animUpdate = () => {
-                anim.progress(
-                    videoRef.current[videoId].currentTime /
-                    hightlightsSlides[videoId].videoDuration
-                );
+                anim.progress(videoRef.current[videoId].currentTime / hightlightsSlides[videoId].videoDuration);
             };
 
             if (isPlaying) {
@@ -211,7 +208,7 @@ const VideoCarousel = () => {
                     ))}
                 </div>
 
-                <button className="control-btn">
+                <button className="control-btn cursor-pointer">
                     <img
                         src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
                         alt={isLastVideo ? "replay" : !isPlaying ? "play" : "pause"}
